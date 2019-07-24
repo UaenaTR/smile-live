@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 export default {
   data () {
     return {
@@ -23,13 +23,16 @@ export default {
     })
   },
   created () {
-
+    const data = 'tt'
+    this.changeUsername(data)
   },
   mounted () {
 
   },
   methods: {
-
+    ...mapMutations('user', {
+      changeUsername: 'commitUsername'
+    })
   }
 }
 </script>
