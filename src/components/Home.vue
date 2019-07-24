@@ -1,10 +1,11 @@
 <template>
   <div>
-    <h1>Live</h1>
+    <h1>Live{{ username }}</h1>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   data () {
     return {
@@ -13,6 +14,13 @@ export default {
   },
   components: {
 
+  },
+  computed: {
+    ...mapState('user', {
+      username (state) {
+        return state.username
+      }
+    })
   },
   created () {
 
