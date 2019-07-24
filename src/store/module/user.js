@@ -1,7 +1,11 @@
 const state = {
   username: 'tr'
 }
-const getters = {}
+const getters = {
+  username (state) {
+    return state.username + 'hhh'
+  }
+}
 const mutations = {
   commitUsername (state, data) {
     state.username = data
