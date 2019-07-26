@@ -13,5 +13,10 @@ export default [
     path: '/Chat',
     name: 'Chat',
     component: () => import('../components/Chat.vue')
+  },
+  {
+    path: '/Baberrage',
+    name: 'Baberrage',
+    component: () => import('../components/Baberrage.vue')
   }
 ]
