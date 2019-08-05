@@ -1,9 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueSocketIo from 'vue-socket.io'
+import { vueBaberrage } from 'vue-baberrage'
 
 import router from '@router/router'
 import store from './store/index'
+
+Vue.use(vueBaberrage)
 
 Vue.use(new VueSocketIo({
   dubug: true,
