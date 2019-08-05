@@ -2,7 +2,7 @@ export default [
   {
     path: '/',
     name: 'Home',
-    component: () => import('../components/Home.vue')
+    component: () => import('../views/Home.vue')
   },
   {
     path: '/Live',
