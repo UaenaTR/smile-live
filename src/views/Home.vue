@@ -1,12 +1,12 @@
 <template>
   <div class="home">
     <el-container>
-      <el-header height='80px'>
+      <el-header height="80px">
         <top-nav></top-nav>
       </el-header>
       <el-container>
-        <el-aside width='200px'>aside</el-aside>
-        <el-main>main</el-main>
+        <el-aside width="200px">Aside</el-aside>
+        <el-main>Main</el-main>
       </el-container>
     </el-container>
   </div>
@@ -41,10 +41,15 @@ export default {
 <style scoped lang="scss">
   .home{
     .el-container{
+      width: 100%;
       height:100%;
       .el-header{
-      padding: 0;
+        padding: 0;
+        overflow: auto;
       }
+      // .el-main{
+      //   width: calc(100% - 200px);
+      // }
     }
   }
 </style>

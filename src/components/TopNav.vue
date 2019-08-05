@@ -3,21 +3,20 @@
       <img class="app-logo" src="../assets/logo.png" alt="">
       <ul class="nav-list">
           <li><span>首页</span></li>
-          <li @mouseover="showType = true" @mouseout="showType = false">
+          <li @mouseover="showType = true" @mouseleave="showType = false">
               <span>分类<i :class="showType ? 'triangle up down' : 'triangle down'"></i></span>
           </li>
           <li><span>直播吧</span></li>
       </ul>
+      <el-input class="search-ipt" placeholder='请输入主播名或房间号'></el-input>
       <!-- 分类 -->
-    <div class="type-content" v-if='showType'>
+    <div class="type-content" :style='showType ? blockSty : ""' @mouseover="showType = true" @mouseleave="showType = false">
         <div class="hot-type">
             <div class="hot-type-title">热门分类</div>
             <div class="hot-type-cont">
                 <span class="hot-type-box">英雄联盟</span>
                 <span class="hot-type-box">炉石传说</span>
                 <span class="hot-type-box">地下城与勇士</span>
-                <span class="hot-type-box">云顶之弈</span>
-                <span class="hot-type-box">云顶之弈</span>
                 <span class="hot-type-box">云顶之弈</span>
             </div>
         </div>
@@ -30,7 +29,8 @@
 export default {
   data () {
     return {
-      showType: false
+      showType: false,
+      blockSty: { display: 'block' }
     }
   },
   components: {
@@ -57,13 +57,14 @@ export default {
         background-color: #fff;
         .app-logo{
             height: 60px;
-            margin: auto 50px;
+            margin: auto 150px;
         }
         .nav-list{
             width: 260px;
             display: flex;
             justify-content: space-around;
             margin-left: 50px;
+            flex: 0 0 auto;
             li{
                 span{
                     &:hover{
@@ -82,8 +83,8 @@ export default {
                     border-left: 6px transparent solid;
                     border-bottom: 6px transparent solid;
                     border-right: 6px transparent solid;
-                    top: 38px;
-                    left: 350px;
+                    top: 35px;
+                    left: 550px;
                 }
                 &.up{
                     top:30px;
@@ -92,14 +93,20 @@ export default {
                 }
             }
         }
+        .search-ipt{
+          width: 200px;
+          height: 40px;
+          margin-left: 300px;
+        }
         .type-content{
+            display: none;
             width: 280px;
             height: 260px;
             background-color: aqua;
             position: absolute;
             z-index:3;
             top:80px;
-            left:220px;
+            left:410px;
             border-radius: 10px;
             text-align: center;
             .hot-type{
@@ -125,6 +132,11 @@ export default {
                         font-size: 12px;
                         line-height: 30px;
                         margin-top: 10px;
+                        cursor: pointer;
+                        &:hover{
+                          background-color:coral;
+                          color: #fff;
+                        }
                     }
                 }
             }

@@ -16,7 +16,6 @@ export default {
 
 <style lang="scss">
 #app {
-  min-width: 800px;
   height: 100%;
   background-color: #f2f5f6;
 }
