@@ -10,7 +10,17 @@
       </ul>
       <!-- 分类 -->
     <div class="type-content" v-if='showType'>
-        <div class="hot-type"></div>
+        <div class="hot-type">
+            <div class="hot-type-title">热门分类</div>
+            <div class="hot-type-cont">
+                <span class="hot-type-box">英雄联盟</span>
+                <span class="hot-type-box">炉石传说</span>
+                <span class="hot-type-box">地下城与勇士</span>
+                <span class="hot-type-box">云顶之弈</span>
+                <span class="hot-type-box">云顶之弈</span>
+                <span class="hot-type-box">云顶之弈</span>
+            </div>
+        </div>
         <el-button class="all-type">全部分类</el-button>
     </div>
   </div>
@@ -83,18 +93,44 @@ export default {
             }
         }
         .type-content{
-            width: 180px;
-            height: 220px;
+            width: 280px;
+            height: 260px;
             background-color: aqua;
             position: absolute;
             z-index:3;
             top:80px;
-            left:240px;
+            left:220px;
             border-radius: 10px;
             text-align: center;
+            .hot-type{
+                .hot-type-title{
+                    margin-left: 15px;
+                    text-align: left;
+                    font-size: 16px;
+                    height: 60px;
+                }
+                .hot-type-cont{
+                    display: flex;
+                    width: 90%;
+                    margin: 0 auto;
+                    justify-content: space-between;
+                    flex-flow: row wrap;
+                    .hot-type-box{
+                        display: block;
+                        width: 30%;
+                        padding: 0 2px;
+                        height: 30px;
+                        border-radius: 10px;
+                        background-color: #cccccc;
+                        font-size: 12px;
+                        line-height: 30px;
+                        margin-top: 10px;
+                    }
+                }
+            }
             .all-type{
                 width: 90%;
-                margin: 10px auto;
+                margin: 50px auto;
                 background-color: coral;
                 color:#fff;
                 font-weight: bolder;
