@@ -45,7 +45,6 @@ export default {
       height:100%;
       .el-header{
         padding: 0;
-        overflow: auto;
         background-color: #fff;
       }
       // .el-main{

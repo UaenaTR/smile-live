@@ -1,14 +1,21 @@
 <template>
   <div class="top-nav">
-      <img class="app-logo" src="../assets/logo.png" alt="">
-      <ul class="nav-list">
-          <li><span>首页</span></li>
-          <li @mouseover="showType = true" @mouseleave="showType = false">
+    <img class="app-logo" src="../assets/logo.png" alt="">
+    <ul class="nav-list">
+        <li><span>首页</span></li>
+        <li @mouseover="showType = true" @mouseleave="showType = false">
               <span>分类<i :class="showType ? 'triangle up down' : 'triangle down'"></i></span>
-          </li>
-          <li><span>直播吧</span></li>
-      </ul>
-      <el-input class="search-ipt" placeholder='请输入主播名或房间号'></el-input>
+        </li>
+        <li><span>直播吧</span></li>
+    </ul>
+    <div style="line-height:80px;">
+        <el-input class="search-ipt" placeholder='请输入主播名或房间号'></el-input>
+        <i class="iconfont icon-sousuo" style="position:relative;left:-25px;top:2px;font-size:18px;cursor:pointer"></i>
+    </div>
+    <div class="concern">
+        <i class="iconfont icon-shoucang"></i>
+    </div>
+    <div class="user-logo"></div>
       <!-- 分类 -->
     <div class="type-content" :style='showType ? blockSty : ""' @mouseover="showType = true" @mouseleave="showType = false">
         <div class="hot-type">
@@ -52,7 +59,7 @@ export default {
     .top-nav{
         display: flex;
         height: 80px;
-        line-height: 80px;
+        position: relative;
         .app-logo{
             position: relative;
             height:60px;
@@ -148,6 +155,29 @@ export default {
                 font-size: 16px;
                 font-weight: bolder;
             }
+        }
+        .concern{
+            line-height: 80px;
+            margin-left: 100px;
+            i{
+                font-size: 22px;
+                    &:hover{
+                    color: red;
+                    cursor: pointer;
+                }
+            }
+        }
+        .user-logo{
+            width: 50px;
+            height: 50px;
+            background-color: coral;
+            background-image: url('../assets/logo.png');
+            background-size: cover;
+            border-radius: 50%;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: 50px;
         }
     }
 </style>

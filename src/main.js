@@ -8,6 +8,7 @@ import router from '@router/router'
 import store from './store/index'
 import '@assets/css/base.css'
 import 'element-ui/lib/theme-chalk/index.css'
+import '@assets/font/iconfont.css'
 
 Vue.use(ElementUI)
 Vue.use(vueBaberrage)
