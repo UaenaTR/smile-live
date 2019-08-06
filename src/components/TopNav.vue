@@ -50,27 +50,28 @@ export default {
 
 <style scoped lang="scss">
     .top-nav{
-        position: relative;
-        line-height: 80px;
-        font-size: 18px;
         display: flex;
-        background-color: #fff;
+        height: 80px;
+        line-height: 80px;
         .app-logo{
-            height: 60px;
-            margin: auto 150px;
+            position: relative;
+            height:60px;
+            margin-left: 150px;
+            top:50%;
+            transform: translateY(-50%);
         }
         .nav-list{
-            width: 260px;
-            display: flex;
-            justify-content: space-around;
             margin-left: 50px;
-            flex: 0 0 auto;
+            line-height: 80px;
             li{
-                span{
-                    &:hover{
-                        color:coral;
-                    }
+                float: left;
+                &:nth-child(n + 2){
+                    margin-left: 20px;
                 }
+                &:hover{
+                    color: coral;
+                }
+                font-size: 18px;
             }
             .triangle{
                 position: absolute;
@@ -79,72 +80,72 @@ export default {
                 height: 0;
                 transition: all linear 0.2s;
                 &.down{
-                    border-top: 6px black solid;
-                    border-left: 6px transparent solid;
-                    border-bottom: 6px transparent solid;
-                    border-right: 6px transparent solid;
-                    top: 35px;
-                    left: 550px;
+                    border-top: 4px black solid;
+                    border-left: 4px transparent solid;
+                    border-bottom: 4px transparent solid;
+                    border-right: 4px transparent solid;
+                    top: 38px;
+                    left: 352px;
                 }
                 &.up{
-                    top:30px;
+                    top:34px;
                     transform: rotate(180deg);
                     transition: all linear 0.2s
                 }
             }
         }
         .search-ipt{
-          width: 200px;
-          height: 40px;
-          margin-left: 300px;
+            width: 200px;
+            margin-left: 300px;
         }
         .type-content{
             display: none;
             width: 280px;
-            height: 260px;
-            background-color: aqua;
+            height: 280px;
             position: absolute;
-            z-index:3;
+            background-color: aqua;
             top:80px;
-            left:410px;
-            border-radius: 10px;
-            text-align: center;
+            left: 200px;
+            border-radius: 20px;
             .hot-type{
                 .hot-type-title{
-                    margin-left: 15px;
-                    text-align: left;
-                    font-size: 16px;
-                    height: 60px;
+                    margin-left: 20px;
+                    font-size: 14px;
+                    font-weight: bolder;
+                    line-height: 40px;
                 }
                 .hot-type-cont{
                     display: flex;
+                    justify-content: space-between;
                     width: 90%;
                     margin: 0 auto;
-                    justify-content: space-between;
                     flex-flow: row wrap;
                     .hot-type-box{
                         display: block;
                         width: 30%;
-                        padding: 0 2px;
                         height: 30px;
-                        border-radius: 10px;
-                        background-color: #cccccc;
-                        font-size: 12px;
+                        background-color: #ccc;
                         line-height: 30px;
+                        text-align: center;
+                        border-radius: 10px;
                         margin-top: 10px;
                         cursor: pointer;
                         &:hover{
-                          background-color:coral;
-                          color: #fff;
+                            background-color: coral;
+                            color:#fff;
                         }
                     }
                 }
             }
             .all-type{
                 width: 90%;
-                margin: 50px auto;
-                background-color: coral;
-                color:#fff;
+                background-color:coral;
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                color: #fff;
+                font-size: 16px;
                 font-weight: bolder;
             }
         }
