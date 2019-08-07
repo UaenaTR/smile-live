@@ -5,7 +5,9 @@
         <top-nav></top-nav>
       </el-header>
       <el-container>
-        <el-aside width="200px">Aside</el-aside>
+        <el-aside width="240px">
+          <Aside></Aside>
+        </el-aside>
         <el-main>Main</el-main>
       </el-container>
     </el-container>
@@ -14,6 +16,7 @@
 
 <script>
 import TopNav from '@components/TopNav'
+import Aside from '@components/Aside'
 export default {
   data () {
     return {
@@ -21,7 +24,8 @@ export default {
     }
   },
   components: {
-    TopNav
+    TopNav,
+    Aside
   },
   computed: {
 
@@ -44,12 +48,16 @@ export default {
       width: 100%;
       height:100%;
       .el-header{
-        padding: 0;
-        background-color: #fff;
+          padding: 0;
+          background-color: #fff;
+        }
+      .el-container{
+        height: calc(100vh - 80px);
+        .el-aside{
+          padding-top: 50px;
+           background-color: #333;
+        }
       }
-      // .el-main{
-      //   width: calc(100% - 200px);
-      // }
     }
   }
 </style>
