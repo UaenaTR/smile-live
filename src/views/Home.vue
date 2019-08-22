@@ -30,9 +30,7 @@ export default {
   computed: {
 
   },
-  created () {
-
-  },
+  created () {},
   mounted () {
 
   },

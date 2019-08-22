@@ -29,6 +29,8 @@ module.exports = {
     }
   },
 
+  lintOnSave: true,
+
   configureWebpack: (config) => {
     if (isProduction) {
       config.optimization.minimizer.push(
