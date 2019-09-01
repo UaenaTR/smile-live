@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import ElementUI from 'element-ui'
-import VueSocketIo from 'vue-socket.io'
+// import VueSocketIo from 'vue-socket.io'
 import { vueBaberrage } from 'vue-baberrage'
 
 import router from '@router/router'

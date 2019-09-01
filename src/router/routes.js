@@ -18,5 +18,10 @@ export default [
     path: '/Baberrage',
     name: 'Baberrage',
     component: () => import('../components/Baberrage.vue')
+  },
+  {
+    path: '/SkuSelect',
+    name: 'SkuSelect',
+    component: () => import('../components/SkuSelect.vue')
   }
 ]
